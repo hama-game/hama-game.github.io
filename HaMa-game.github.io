@@ -244,154 +244,172 @@
         #score3 { color: #00ffcc; font-weight: bold; }
         .q-count3 { font-size: 1rem; color: rgba(255, 255, 255, 0.5); margin-bottom: 10px; }
 
-        /* ── STYLE FOR NEW GAME 4 (CARTOON WORD GAME) ── */
+        /* ── STYLE FOR GAME 4 (GAMING NEON STYLE) ── */
         #game4-root {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            background: radial-gradient(circle at center, #18122b 0%, #090514 100%);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 40px 20px;
-            color: #2c3e50;
+            padding: 30px 15px;
+            color: #fff;
+        }
+        #game4-root::before {
+            content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0;
+            background-image: linear-gradient(rgba(111, 66, 193, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(111, 66, 193, 0.08) 1px, transparent 1px);
+            background-size: 30px 30px; z-index: 0; pointer-events: none;
         }
         .game4-container {
-            background-color: #ffffff;
-            border: 4px solid #2c3e50;
-            border-radius: 25px;
-            box-shadow: 8px 8px 0px #2c3e50;
-            padding: 30px;
+            background: rgba(25, 18, 45, 0.85);
+            border: 2px solid #7928ca;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(121, 40, 202, 0.35), inset 0 0 15px rgba(0, 255, 240, 0.1);
+            padding: 30px 20px;
             width: 100%;
-            max-width: 600px;
+            max-width: 650px;
             text-align: center;
             position: relative;
-            overflow: hidden;
+            z-index: 1;
+            backdrop-filter: blur(12px);
             box-sizing: border-box;
         }
         #game4-root h1 {
-            color: #ff4757;
-            font-size: 2.2rem;
-            text-shadow: 3px 3px 0px #f1c40f;
-            margin-bottom: 25px;
-            -webkit-text-stroke: 1px #2c3e50;
-            margin-top: 10px;
+            color: #fff;
+            font-size: 2rem;
+            text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            font-weight: 700;
         }
         .info-section4 {
-            background-color: #ffeaa7;
-            border: 3px solid #2c3e50;
-            border-radius: 18px;
-            padding: 15px;
+            background: linear-gradient(135deg, rgba(30, 20, 60, 0.9), rgba(15, 10, 35, 0.9));
+            border: 1px solid rgba(0, 255, 240, 0.3);
+            border-radius: 16px;
+            padding: 20px 15px;
             margin-bottom: 20px;
-            box-shadow: 4px 4px 0px #2c3e50;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
         .category-title4 {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #2c3e50;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #a0aec0;
+            letter-spacing: 0.5px;
         }
         .category-name4 {
-            font-size: 2.3rem;
-            font-weight: 900;
-            color: #6c5ce7;
-            margin-top: 5px;
-            text-shadow: 2px 2px 0px #fff;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00fff0;
+            margin-top: 8px;
+            text-shadow: 0 0 12px rgba(0, 255, 240, 0.6);
         }
         .timer-box4 {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            color: #10ac84;
-            background-color: white;
-            margin: 15px auto;
-            padding: 5px 15px;
-            border-radius: 50px;
+            color: #ff007f;
+            background: rgba(255, 0, 127, 0.1);
+            margin: 15px auto 5px auto;
+            padding: 6px 20px;
+            border-radius: 30px;
             display: inline-block;
-            border: 1px solid #ccc;
+            border: 1.5px solid #ff007f;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
         }
         .timer-box4.danger {
             color: #ff4757;
-            background-color: #ffccd5;
-            animation: bounce4 0.5s infinite alternate;
+            background: rgba(255, 71, 87, 0.2);
+            border-color: #ff4757;
+            animation: pulseGamer 0.6s infinite alternate;
         }
-        @keyframes bounce4 {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
+        @keyframes pulseGamer {
+            from { transform: scale(1); box-shadow: 0 0 10px #ff4757; }
+            to { transform: scale(1.08); box-shadow: 0 0 25px #ff4757; }
         }
         .action-btn4 {
-            font-family: 'Noto Naskh Arabic', sans-serif;
-            background-color: #ff4757;
+            font-family: inherit;
+            background: linear-gradient(90deg, #7928ca, #ff007f);
             color: white;
-            border: 3px solid #2c3e50;
-            padding: 15px 40px;
-            font-size: 1.5rem;
+            border: none;
+            padding: 14px 40px;
+            font-size: 1.3rem;
             font-weight: bold;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0px 5px 0px #2c3e50;
-            transition: all 0.1s ease;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+            transition: all 0.2s ease;
             margin-bottom: 20px;
             display: inline-block;
         }
-        .action-btn4:active {
-            transform: translateY(5px);
-            box-shadow: 0px 0px 0px #2c3e50;
+        .action-btn4:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(255, 0, 127, 0.7);
         }
         #knowBtn4 {
-            background-color: #2ed573;
+            background: linear-gradient(90deg, #00b3ff, #00ffcc);
+            color: #05010d;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);
+        }
+        #knowBtn4:hover:not(:disabled) {
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.8);
         }
         .action-btn4:disabled {
-            background-color: #95a5a6;
-            box-shadow: 0px 5px 0px #7f8c8d;
+            background: #333;
+            color: #666;
+            box-shadow: none;
             cursor: not-allowed;
+            transform: none;
         }
         .alphabet-grid4 {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
-            gap: 12px;
-            margin-top: 25px;
-            background-color: #f1f2f6;
+            grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+            background: rgba(10, 5, 20, 0.6);
             padding: 15px;
-            border-radius: 20px;
-            border: 3px solid #2c3e50;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .letter-btn4 {
-            background-color: #ffffff;
-            border: 3px solid #2c3e50;
-            color: #2c3e50;
-            font-size: 1.4rem;
+            background: #1f1b33;
+            border: 1px solid rgba(121, 40, 202, 0.5);
+            color: #e2e8f0;
+            font-size: 1.3rem;
             font-weight: bold;
-            padding: 8px 0;
-            border-radius: 12px;
+            padding: 10px 0;
+            border-radius: 10px;
             cursor: pointer;
-            box-shadow: 0px 4px 0px #2c3e50;
-            transition: all 0.1s ease;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
         }
-        .letter-btn4:active:not(:disabled) {
-            transform: translateY(4px);
-            box-shadow: 0px 0px 0px #2c3e50;
+        .letter-btn4:hover:not(:disabled) {
+            border-color: #00fff0;
+            color: #00fff0;
+            box-shadow: 0 0 10px rgba(0, 255, 240, 0.4);
         }
         .letter-btn4:disabled {
-            background-color: #bdc3c7;
-            color: #7f8c8d;
-            border-color: #7f8c8d;
+            background: #110d1f;
+            color: #4a5568;
+            border-color: rgba(255,255,255,0.05);
             box-shadow: none;
             cursor: not-allowed;
-            transform: translateY(4px);
             text-decoration: line-through;
-            opacity: 0.6;
+            opacity: 0.4;
         }
         .restart-btn4 {
-            background-color: #ffa502;
-            margin-top: 25px;
+            background: linear-gradient(90deg, #ff416c, #ff4b2b);
+            margin-top: 20px;
+            box-shadow: 0 0 15px rgba(255, 75, 43, 0.4);
         }
         .game-over-msg4 {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: bold;
             color: #ff4757;
             margin-top: 15px;
-            background-color: #ffeaa7;
-            padding: 10px;
-            border-radius: 15px;
-            border: 2px dashed #ff4757;
+            background: rgba(255, 71, 87, 0.15);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid #ff4757;
             display: none;
+            text-shadow: 0 0 5px rgba(255, 71, 87, 0.5);
         }
     </style>
 </head>
@@ -415,9 +433,9 @@
             </button>
 
             <button class="menu-btn" onclick="switchSection('game4-root')">
-                <span class="icon">👾</span>
+                <span class="icon">⚡</span>
                 <h3>وشەکاری خێرا</h3>
-                <p>یاری پیت و بواری جیاواز بە شێوازی کارتۆنی</p>
+                <p>ڕکابەری پیتەکان و بوارە جیاوازەکان بە کاتی دیاریکراوەوە</p>
             </button>
         </div>
     </div>
@@ -482,7 +500,7 @@
         <button class="home-btn" onclick="goHome()">🏠 سەرەتایی</button>
 
         <div class="game4-container">
-            <h1>👾 یاری وشەکاری خێرا 🎮</h1>
+            <h1>⚡ وشەکاری خێرا 🎮</h1>
             
             <div class="info-section4">
                 <div class="category-title4">🎯 بواری دیاریکراو:</div>
@@ -490,24 +508,78 @@
                 <div id="timer4" class="timer-box4">⏱️ 01:00</div>
             </div>
 
-            <button id="knowBtn4" class="action-btn4" onclick="clickKnow4()">🌟 زانیم! 🌟</button>
+            <button id="knowBtn4" class="action-btn4" onclick="clickKnow4()">⚡ زانیم! ⚡</button>
             
             <div id="gameOverMessage4" class="game-over-msg4"></div>
 
             <div class="alphabet-grid4" id="lettersContainer4"></div>
 
-            <button class="action-btn4 restart-btn4" onclick="initGame4()">🔄 دووبارە کردنەوە</button>
+            <button class="action-btn4 restart-btn4" onclick="initGame4()">🔄 یاری نوێ</button>
         </div>
     </div>
 
 
     <script>
+        // ==========================================
+        // WEB AUDIO API SOUND SYSTEM
+        // ==========================================
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+        function playClickSound() {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+            osc.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.08);
+            gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.08);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start();
+            osc.stop(audioCtx.currentTime + 0.08);
+        }
+
+        function playSuccessSound() {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(440, now);
+            osc.frequency.setValueAtTime(587.33, now + 0.08);
+            osc.frequency.setValueAtTime(880, now + 0.16);
+            gain.gain.setValueAtTime(0.2, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + 0.3);
+        }
+
+        function playGameOverSound() {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const now = audioCtx.currentTime;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(300, now);
+            osc.frequency.linearRampToValueAtTime(100, now + 0.5);
+            gain.gain.setValueAtTime(0.25, now);
+            gain.gain.exponentialRampToValueAtTime(0.01, now + 0.5);
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+            osc.start(now);
+            osc.stop(now + 0.5);
+        }
+
         // NAVIGATION SYSTEM
         let countdownInterval; 
         let timer3 = null;     
         let timerId4 = null; 
 
         function switchSection(sectionId) {
+            playClickSound();
             clearInterval(countdownInterval);
             if (timer3) clearInterval(timer3);
             if (timerId4) clearInterval(timerId4);
@@ -527,6 +599,7 @@
         }
 
         function goHome() {
+            playClickSound();
             clearInterval(countdownInterval);
             if (timer3) clearInterval(timer3);
             if (timerId4) clearInterval(timerId4);
@@ -587,6 +660,7 @@
                 if (totalSeconds <= 0) {
                     clearInterval(countdownInterval);
                     timerDisplay.innerText = labels.end;
+                    playGameOverSound();
                     if(cardElement.classList.contains('reveal')) {
                         cardValueElement.innerText = labels.timeout;
                     }
@@ -603,6 +677,7 @@
         function pickRandomCard() {
             if (isShuffling) return; 
             isShuffling = true;
+            playClickSound();
 
             cardElement.classList.remove('reveal');
             cardElement.classList.add('shuffle');
@@ -624,6 +699,7 @@
 
         function toggleCard() {
             if (isShuffling) return;
+            playClickSound();
             cardElement.classList.toggle('reveal');
         }
 
@@ -695,6 +771,7 @@
         }
 
         function timeOut3() {
+            playGameOverSound();
             questionBox3.style.display = "none";
             wrongMark3.style.display = "block";
             zanimBtn3.disabled = true;
@@ -709,6 +786,7 @@
             if (timer3) clearInterval(timer3);
             
             if (isCorrect && timeLeft3 > 0) {
+                playSuccessSound();
                 score3 += 10;
                 scoreDoc3.innerText = score3;
             }
@@ -718,14 +796,16 @@
         }
 
         // ==========================================
-        // GAME 4: CARTOON WORD GAME LOGIC
+        // GAME 4: FAST WORD GAME (GAMER EDITION) LOGIC
         // ==========================================
         const categories4 = [
-            "پیشە", "کردار", "شوێن", "شار", "وڵات", "قارە (کیشوەر)", 
-            "ناوی مرۆڤ", "ناوی فیلم", "ناوی کچ", "ناوی کوڕ", 
-            "کەناڵی تەلەفزیۆن", "کەلوپەل", "کۆمپانیاکان", 
-            "ئامێری کارەبایی", "ئامێری ئەلیکترۆنی", "ئاژەڵان",
-            "میوە یان سەوزە", "یانەی وەرزشی", "ئۆتۆمبێل", "خواردن"
+            "یانەی وەرزشی", "وەرزشوان یان یاریزان", "پایتەختی وڵاتێک", 
+            "ناوی داھێنەر یان زانا", "ناوی بڕاند یان کۆمپانیا", "ئامێری ئەلیکترۆنی/تەکنۆلۆژیا",
+            "ناوی یاری (مۆبایل یان کۆنسۆڵ)", "شوێنی مێژوویی یان گەشتیاری", "فیلم یان زنجیرەی تەلەفزیۆنی",
+            "پیشە یان پسپۆڕی", "ئاژەڵێکی کێوی یان دەریایی", "خواردن یان خواردنەوە",
+            "کێشوەر یان ناوچەی جوگرافی", "ئۆتۆمبێل یان ئامێری گواستنەوە", "کەلوپەلی نێو ماڵ/نووسینگە",
+            "ناوی کچ", "ناوی کوڕ", "شارێکی جیهانی", "چەکی فێربوون یان سەربازی",
+            "ئامێری مۆسیقا", "تەکنۆلۆژیای زیرەک", "زمانێکی جیهانی", "میوە یان سەوزە"
         ];
 
         const kurdishLetters4 = [
@@ -786,25 +866,26 @@
                 }
 
                 if (timeLeft4 <= 0) {
-                    endGame4("💥 گەیم ئۆڤەر! کاتی ١ خولەکەکە تەواو بوو! دواجار نۆرەی کێ بوو ئەو دۆڕا!");
+                    endGame4("💥 GAME OVER! کاتی ١ خولەک تەواو بوو! نۆرەی هەر کەسێک بوو دۆڕاوی سەرەکییە!");
                 }
             }, 1000);
         }
 
         function selectLetter4(button) {
             if (!gameActive4) return;
+            playClickSound();
             
             if(lastSelectedButton4) {
-                lastSelectedButton4.style.backgroundColor = "#ffffff";
-                lastSelectedButton4.style.color = "#2c3e50";
-                lastSelectedButton4.style.boxShadow = "0px 4px 0px #2c3e50";
-                lastSelectedButton4.style.transform = "none";
+                lastSelectedButton4.style.backgroundColor = "#1f1b33";
+                lastSelectedButton4.style.color = "#e2e8f0";
+                lastSelectedButton4.style.borderColor = "rgba(121, 40, 202, 0.5)";
+                lastSelectedButton4.style.boxShadow = "0 4px 6px rgba(0,0,0,0.3)";
             }
             
-            button.style.backgroundColor = "#ff4757";
-            button.style.color = "white";
-            button.style.boxShadow = "0px 0px 0px #2c3e50";
-            button.style.transform = "translateY(4px)";
+            button.style.backgroundColor = "#ff007f";
+            button.style.color = "#ffffff";
+            button.style.borderColor = "#ff007f";
+            button.style.boxShadow = "0 0 15px rgba(255, 0, 127, 0.8)";
             lastSelectedButton4 = button;
         }
 
@@ -812,16 +893,19 @@
             if (!gameActive4) return;
             
             if (lastSelectedButton4) {
+                playSuccessSound();
                 lastSelectedButton4.disabled = true;
                 lastSelectedButton4 = null; 
             } else {
-                alert("⚠️ ئۆپسی! سەرەتا پیتێک هەڵبژێره، پاشان زانیم دابگرە!");
+                playGameOverSound();
+                alert("⚠️ سەرەتا پیتێک لە خوارەوە هەڵبژێرە، پاشان زانیم بنێسە!");
             }
         }
 
         function endGame4(message) {
             gameActive4 = false;
             clearInterval(timerId4);
+            playGameOverSound();
             gameOverMessage4.innerText = message;
             gameOverMessage4.style.display = "block";
             knowBtn4.disabled = true;
